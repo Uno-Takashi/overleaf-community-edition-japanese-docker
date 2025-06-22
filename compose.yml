@@ -26,7 +26,6 @@ services:
         volumes:
             - ./overleaf_data:/var/lib/overleaf
             - .:/workspace:cached
-            - ./templates:/workspace/templates:ro
             ########################################################################
             ####  Server Pro: Uncomment the following line to mount the docker  ####
             ####             socket, required for Sibling Containers to work    ####
@@ -111,9 +110,8 @@ services:
             # OVERLEAF_LDAP_LAST_NAME_ATT: 'sn'
             # OVERLEAF_LDAP_UPDATE_USER_DETAILS_ON_LOGIN: 'true'
 
-            # Template settings for default projects
             # OVERLEAF_TEMPLATES_USER_ID: "578773160210479700917ee5"
-            OVERLEAF_NEW_PROJECT_TEMPLATE_LINKS: '[{"name":"日本語論文テンプレート","url":"/templates/japanese-paper"},{"name":"Basic Japanese","url":"/templates/japanese-basic"},{"name":"All Templates","url":"/templates/all"}]'
+            # OVERLEAF_NEW_PROJECT_TEMPLATE_LINKS: '[ {"name":"All Templates","url":"/templates/all"}]'
 
 
             # OVERLEAF_PROXY_LEARN: "true"
