@@ -1,0 +1,3 @@
+# Overleaf Data Directory
+# This file ensures the directory is tracked by Git while ignoring its contents
+# This directory stores Overleaf application data including user projects and settings

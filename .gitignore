@@ -1,0 +1,123 @@
+# Overleaf Community Edition Docker Setup - .gitignore
+
+# =============================================================================
+# Docker Data Directories (keep .gitkeep files to track empty directories)
+# =============================================================================
+overleaf_data/*
+!overleaf_data/.gitkeep
+
+mongo_data/*
+!mongo_data/.gitkeep
+
+redis_data/*
+!redis_data/.gitkeep
+
+# Legacy ShareLaTeX data directory (if migrating from old setup)
+sharelatex_data/
+
+# =============================================================================
+# Docker and Environment Files
+# =============================================================================
+.env
+.env.local
+.env.*.local
+docker-compose.override.yml
+
+# =============================================================================
+# LaTeX/TeX Build Artifacts
+# =============================================================================
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lot
+*.lof
+*.bcf
+*.run.xml
+*.end
+*.figlist
+*.makefile
+*.fls.orig
+
+# =============================================================================
+# Temporary and Cache Directories
+# =============================================================================
+tmp/
+temp/
+.cache/
+.parcel-cache/
+
+# =============================================================================
+# Editor and IDE Files
+# =============================================================================
+# VS Code (keep devcontainer config)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/extensions.json
+
+# Other IDEs
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =============================================================================
+# OS Generated Files
+# =============================================================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+.directory
+
+# =============================================================================
+# Backup and Archive Files
+# =============================================================================
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+
+# =============================================================================
+# Node.js (if using for development tools)
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+*.tgz
+
+# =============================================================================
+# Logs
+# =============================================================================
+logs/
+*.log

@@ -1,0 +1,3 @@
+# Redis Data Directory
+# This file ensures the directory is tracked by Git while ignoring its contents
+# This directory stores Redis cache data for Overleaf session management and caching

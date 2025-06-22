@@ -1,0 +1,48 @@
+{
+    "name": "Overleaf Development Environment",
+    "dockerComposeFile": ["../compose.yml"],
+    "service": "overleaf",
+    "workspaceFolder": "/workspace",
+    
+    // 既存のoverleafコンテナにアタッチ
+    "shutdownAction": "none",
+    
+    // VS Code設定
+    "customizations": {
+        "vscode": {
+            // 推奨拡張機能
+            "extensions": [
+                "ms-vscode.vscode-json",
+                "redhat.vscode-yaml",
+                "ms-azuretools.vscode-docker",
+                "James-Yu.latex-workshop",
+                "ms-vscode.vscode-markdown"
+            ],
+            
+            // VS Code設定
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "files.eol": "\n",
+                "editor.insertSpaces": true,
+                "editor.tabSize": 4
+            }
+        }
+    },
+    
+    // ポート転送
+    "forwardPorts": [80],
+    "portsAttributes": {
+        "80": {
+            "label": "Overleaf Web Interface",
+            "onAutoForward": "notify"
+        }
+    },
+    
+    // 追加のボリュームマウント
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    
+    // コンテナのユーザー設定
+    "remoteUser": "root"
+}

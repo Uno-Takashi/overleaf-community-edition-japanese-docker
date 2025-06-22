@@ -1,0 +1,3 @@
+# MongoDB Data Directory
+# This file ensures the directory is tracked by Git while ignoring its contents
+# This directory stores MongoDB database files for Overleaf user data and projects
